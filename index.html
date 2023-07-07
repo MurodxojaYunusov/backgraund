@@ -1,0 +1,42 @@
+<button class="btn btn-1"></button>
+<button class="btn btn-2"></button>
+<button class="btn btn-3"></button>
+<button class="btn btn-4"></button>
+<button class="btn btn-5"></button>
+<button class="btn btn-6"></button>
+<button class="btn btn-7"></button>
+<button class="btn btn-8"></button>
+<button class="btn btn-9"></button>
+<button class="btn btn-10"></button>
+    <style>
+    .btn{
+        padding: 30px 55px;
+        margin-bottom: 2px;
+        background: var(--color);
+        cursor: pointer;  
+        max-width: 100px;
+    }
+    .btn-1 {--color:red;}
+    .btn-2 {--color:green;}
+    .btn-3 {--color:blue;}
+    .btn-4 {--color:yellow;}
+    .btn-5 {--color:brown;}
+    .btn-6 {--color:orange;}
+    .btn-7 {--color:purple;}
+    .btn-8 {--color:black;}
+    .btn-9 {--color:aqua;}
+    .btn-10 {--color:silver;}
+    
+</style>
+
+<script>
+    let btns = document.getElementsByClassName("btn");
+    for(let i = 0; i < btns.length; i++){
+        btns[i].addEventListener("click", function(){
+            let buttonStyle = getComputedStyle(this);
+            let buttonBgColor = 
+            buttonStyle["backgroundColor"];
+            document.body.style.backgroundColor = buttonBgColor;  
+        })
+    }
+</script>
